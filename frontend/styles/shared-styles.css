@@ -10,3 +10,8 @@
   max-width: 250px;
 }
 
+body {
+  width: auto;
+  height: auto;
+  background-color: var(--lumo-primary-color-10pct);
+}
