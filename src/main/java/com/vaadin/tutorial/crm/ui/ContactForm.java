@@ -48,14 +48,11 @@ public class ContactForm extends PolymerTemplate<ContactForm.ContactFormModel> {
     private Button deleteButton;
     @Id("closeButton")
     private Button closeButton;
-    @Id("vaadinTabs")
-    private Tabs vaadinTabs;
 
     /**
      * Creates a new ContactForm.
      */
     public ContactForm(CompanyService companyService) {
-        new Span(new Text("hello world"));
         // You can initialise any data required for the connected UI components here.
         binder.bindInstanceFields(this);
 

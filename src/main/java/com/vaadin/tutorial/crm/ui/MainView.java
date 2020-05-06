@@ -2,6 +2,7 @@ package com.vaadin.tutorial.crm.ui;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
@@ -36,6 +37,11 @@ public class MainView extends PolymerTemplate<MainView.MainViewModel> {
     private Grid<Contact> grid;
 
     private ContactService contactService;
+    @Id("form")
+    private ContactForm form;
+    @Id("vaadinHorizontalLayout")
+    private HorizontalLayout toolbar;
+
     /**
      * Creates a new MainView.
      */
@@ -55,7 +61,6 @@ public class MainView extends PolymerTemplate<MainView.MainViewModel> {
 
         filterText.setValueChangeMode(ValueChangeMode.LAZY);
         filterText.addValueChangeListener(e -> updateList());
-
     }
 
     private void updateList() {
